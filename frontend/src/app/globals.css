@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+:root {
+  --dry-sage: #b6b496ff;
+  --parchment: #f0efe9ff;
+  --oxford-navy: #0c2c57ff;
+  --sand-dune: #e1ddbdff;
+  --sand: #d4af37;
+}
+
+/* ==========================================================
+                    GLOBAL SWIPER
+========================================================== */
+
+.swiper {
+  overflow: visible !important;
+  padding: 16px 0 70px;
+}
+
+.swiper-wrapper {
+  overflow: visible !important;
+  align-items: stretch;
+}
+
+.swiper-slide {
+  height: auto !important;
+  overflow: visible !important;
+  display: flex;
+}
+
+.swiper-slide > * {
+  width: 100%;
+  height: 100%;
+}
+
+/* Pagination */
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 35px;
+  bottom: auto !important;
+  left: 0 !important;
+  width: 100%;
+}
+
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  margin: 0 6px !important;
+  border-radius: 999px !important;
+  background: #0a2342 !important;
+  opacity: 0.25 !important;
+  transition: all 0.35s ease !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 30px !important;
+  border-radius: 999px !important;
+  background: #d4af37 !important;
+  opacity: 1 !important;
+}
+
+/* Navigation */
+
+.swiper-button-prev,
+.swiper-button-next {
+  transition: 0.3s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #d4af37;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .swiper {
+    padding: 10px 0 60px;
+  }
+
+  .swiper-pagination {
+    margin-top: 25px;
+  }
+}
+
+@keyframes dashFlow {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+.flow-line {
+  animation: dashFlow 2.4s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+nav::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #d4af37 #f1f1f1;
+}
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #0a2342;
+}
+.custom-scroll::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}
